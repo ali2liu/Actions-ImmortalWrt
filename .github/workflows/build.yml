@@ -5,21 +5,6 @@ on:
   workflow_dispatch:
 
 env:
-      owner: 'immortalwrt'
-      #  description: 'ImmortalWrt 仓库的拥有者 (Owner of ImmortalWrt repo)'
-      #  type: string
-      #  required: true
-      #  default: 'immortalwrt'
-      repo: 'immortalwrt'
-      #  description: 'ImmortalWrt 仓库的名字 (Name of ImmortalWrt repo)'
-      #  type: string
-      #  required: true
-      #  default: 'immortalwrt'
-      branch: 'master'
-      #  description: 'ImmortalWrt 仓库的分支 (Branch of ImmortalWrt repo)'
-      #  type: string
-      #  required: true
-      #  default: 'master'
       multithreading: true
       #  description: '开启多线程编译 (Enable multithreading build)'
       #  type: boolean
@@ -89,8 +74,8 @@ jobs:
       - name: 克隆 ImmortalWrt 仓库 (Clone ImmortalWrt repo)
         uses: actions/checkout@v4
         with:
-          repository: '${{inputs.owner}}/${{inputs.repo}}'
-          ref: ${{inputs.branch}}
+          repository: 'https://github.com/immortalwrt/immortalwrt'
+          ref: master
           path: ImmortalWrt
 
       - name: 复制当前仓库的配置文件到 ImmortalWrt 仓库  (Copy current repo config to ImmortalWrt repo)
