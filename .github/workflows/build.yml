@@ -77,8 +77,8 @@ jobs:
       - name: 克隆 ImmortalWrt 仓库 (Clone ImmortalWrt repo)
         uses: actions/checkout@v4
         with:
-          repository: '${{owner}}/${{repo}}'
-          ref: ${{branch}}
+          repository: '$owner/$repo'
+          ref: $branch
           path: ImmortalWrt
 
       - name: 复制当前仓库的配置文件到 ImmortalWrt 仓库  (Copy current repo config to ImmortalWrt repo)
