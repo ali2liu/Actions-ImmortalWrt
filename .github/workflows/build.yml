@@ -130,7 +130,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ImmortalWrt-build-result
-          path: ImmortalWrt/bin/targets
+          path: ImmortalWrt/bin
 
   build-ssh:
     if: ${{inputs.ssh == true}}
